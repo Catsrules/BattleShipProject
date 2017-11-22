@@ -2,8 +2,6 @@ package battleShip;
 
 import java.util.Scanner;
 
-import labRectanglesMenu.Rectangle;
-
 public class battleshipApp {
 
 	public static void main(String[] args) {
