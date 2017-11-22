@@ -1,7 +1,9 @@
 package battleShip;
 
 import java.util.Scanner;
+//this is a test to see if this will work
 
+//This is a test for test branch
 public class battleshipApp {
 
 	public static void main(String[] args) {
