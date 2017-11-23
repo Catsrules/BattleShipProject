@@ -69,26 +69,26 @@ public class battleshipApp {
 		if (!p1.addShipP1(row, colm, isVertical, 3)) {//Testing adding ships We need to get it so it is all user input. For example 1 ,2 would need to be 2C. To start the ship and True is saying it IS vertical
 			System.out.print("Bad location");//It addShipP1 returns false it will display "Bad Location" In need to make this a loop. So it asks the user again for a correct location.  
 		}
-		//		   if (!p1.addShipP1(row, colm, false, 4)) {//Testing adding a second ship. 
-		//			   System.out.print("Bad location");
-		//		   }
-		//		   if (!p1.addShipP1(row, colm, true, 3)) {//Testing Adding a third ship that interfears with the second ship. (This should be a bad location.)  
-		//			   System.out.print("Bad location");
-		//		   }
+
 		p1.SetupDisplay();//This just displayes the players board.
-		//		   //p1.player1Display();//This prints player1 and player1's view of players2's board.
+		
+//		p1.player1Display();//This prints player1 and player1's view of players2's board.
 
 	}
 	private static void multiPlayer()
 	{
 	   System.out.print("Comming Soon");
 	}
+	//These two modules translate the user entered coordinates in to Array coordinates 
+	//This one translate the row. Rows are in number format already, however the Array starts at 0 and the rows start at 1 
+		//so we need to minus 1 off the entered number
 	private static int translateGrid (int row2) {
 		int row1 = row2 - 1;
 		
 		return row1;
 		
 	}
+	//This one translates the column. The Column is letters and we need to convert the letters into numbers. 
 	private static int translateGrid (String col) {
 		int colm1;
 		if (col.equalsIgnoreCase("a")) {
@@ -110,6 +110,7 @@ public class battleshipApp {
 			colm1 = -1000; //-1000 for error
 		return colm1;
 	}
+	//This handles the menu for the orientation and returns the boolean value 
 	private static boolean orientation() {
 		boolean isVertical = true;
 		System.out.println("Do you want your ship Vertical? y/n");

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 //This is fun!
 //starts game with blank battlefield
 public class BattleShip {
+	//Alex: I would like these to be 
 	//this is player 1 battlefield.
 	private char[][] battlefieldP1 = {
 			{'-','-','-','-','-'},
