@@ -64,6 +64,9 @@ public class BattleShip {
 				}
 			}
 		}
+		else {
+			okLocation = false;
+		}
 		if (okLocation) {
 			if (vertical) {
 				for (int i = 0; i < shipLength; i++) {
@@ -101,5 +104,18 @@ public class BattleShip {
 			System.out.println();
 		}
 	}
-		
+	public void SetupDisplay () {
+		System.out.println();
+		System.out.println();
+
+		System.out.println("Your Battlefield"); //name of the battlefield
+		System.out.println("  A B C D E");//adding the top row
+		for (int i = 0; i < 5; i++) {//printing out the side bar and the 
+			System.out.print(i + 1 + " ");
+			for (int j = 0; j < 5; j++) {
+				System.out.print(battlefieldP1[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}	
 }
