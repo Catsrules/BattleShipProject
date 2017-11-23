@@ -25,7 +25,7 @@ public class battleshipApp {
   	}	
 	private static void menuPrompt()
 	{
-		System.out.println("Wellcome to Battleship!!!");
+		System.out.println("Welcome to Battleship!!!");
 		System.out.println();
 		System.out.println("Press 1 for Single Player");
 		System.out.println("Press 2 for Muliplayer (Comming Soon!!)");
