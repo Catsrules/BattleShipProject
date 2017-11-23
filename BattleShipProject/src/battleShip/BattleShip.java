@@ -50,7 +50,7 @@ public class BattleShip {
 		if (battlefieldP1 [row1][col1] == '-') { //for vertical ships
 			if (vertical) {
 				for (int i = 0; i < shipLength; i++) {
-					if (battlefieldP1[row1][col1 + i] != '-') {
+					if (battlefieldP1[row1 + 1][col1] != '-') {
 						okLocation = false;
 						break;
 					};
@@ -58,7 +58,7 @@ public class BattleShip {
 			}
 			else { //for horizontal ships
 				for (int i = 0; i < shipLength; i++) {
-					if (battlefieldP1[row1 + i][col1] != '-') {
+					if (battlefieldP1[row1][col1 + i] != '-') {
 						okLocation = false;
 						break;
 					};
@@ -71,12 +71,12 @@ public class BattleShip {
 		if (okLocation) {
 			if (vertical) {
 				for (int i = 0; i < shipLength; i++) {
-					battlefieldP1[row1][col1 + i] = '@';
+					battlefieldP1[row1 + i][col1] = '@';
 				}
 			}
 			else { //for horizontal ships
 				for (int i = 0; i < shipLength; i++) {
-					battlefieldP1[row1 + i][col1] = '@';
+					battlefieldP1[row1][col1 + i] = '@';
 				}
 			}
 		}
