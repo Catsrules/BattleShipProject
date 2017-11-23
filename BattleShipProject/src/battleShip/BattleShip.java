@@ -2,6 +2,7 @@ package battleShip;
 
 import java.util.ArrayList;
 
+//This is fun!
 //starts game with blank battlefield
 public class BattleShip {
 	//this is player 1 battlefield.
@@ -39,7 +40,7 @@ public class BattleShip {
 	
 
 	public BattleShip() {
-		//ToDo Something With ¯\_(:))_/¯
+		//ToDo Something With ï¿½\_(:))_/ï¿½
 	}
 	//this is for adding a ship to Player 1 battlefield. It needs to position to start the ship.
 	//the direction the ship is going and the length of the ship
