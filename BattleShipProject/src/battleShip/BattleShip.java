@@ -5,6 +5,7 @@ import java.util.ArrayList;
 //This is fun!
 //starts game with blank battlefield
 public class BattleShip {
+	//Alex: I would like these to be dynamic 
 	//this is player 1 battlefield.
 	private char[][] battlefieldP1 = {
 			{'-','-','-','-','-'},
@@ -40,7 +41,7 @@ public class BattleShip {
 	
 
 	public BattleShip() {
-		//ToDo Something With �\_(:))_/�
+		//ToDo Something With
 	}
 	//this is for adding a ship to Player 1 battlefield. It needs to position to start the ship.
 	//the direction the ship is going and the length of the ship
@@ -50,7 +51,7 @@ public class BattleShip {
 		if (battlefieldP1 [row1][col1] == '-') { //for vertical ships
 			if (vertical) {
 				for (int i = 0; i < shipLength; i++) {
-					if (battlefieldP1[row1][col1 + i] != '-') {
+					if (battlefieldP1[row1 + 1][col1] != '-') {
 						okLocation = false;
 						break;
 					};
@@ -58,7 +59,7 @@ public class BattleShip {
 			}
 			else { //for horizontal ships
 				for (int i = 0; i < shipLength; i++) {
-					if (battlefieldP1[row1 + i][col1] != '-') {
+					if (battlefieldP1[row1][col1 + i] != '-') {
 						okLocation = false;
 						break;
 					};
@@ -71,12 +72,12 @@ public class BattleShip {
 		if (okLocation) {
 			if (vertical) {
 				for (int i = 0; i < shipLength; i++) {
-					battlefieldP1[row1][col1 + i] = '@';
+					battlefieldP1[row1 + i][col1] = '@';
 				}
 			}
 			else { //for horizontal ships
 				for (int i = 0; i < shipLength; i++) {
-					battlefieldP1[row1 + i][col1] = '@';
+					battlefieldP1[row1][col1 + i] = '@';
 				}
 			}
 		}
