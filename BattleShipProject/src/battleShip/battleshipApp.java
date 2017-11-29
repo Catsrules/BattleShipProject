@@ -1,3 +1,21 @@
+//Things to do
+
+//Create an computer player. 
+	//It needs to be able to auto place ships. (This might be very hard. if it is we can just do a few preset ship locations)
+	//We need it to randomly pick locations on the players grid to attack. 
+			//(two random numbers picking locations. Wraped in a checker to make sure it hasn't hit that spot previously
+
+//Create new class with ships and there define Length (Distroyer = 4 Units)
+		//if this doesnt work We can add a new calss that will be single player move all single player data into that.
+//Add code to show hits and misses between the two players. 
+
+//Finish the game menu system.
+	//Single Player UI. 
+	//Add Messages to the user when playing for example "A4 is a Hit"
+
+
+
+
 package battleShip;
  
 import java.util.Scanner;
@@ -35,9 +53,14 @@ public class battleshipApp {
 	private static void singlePlayer()
 	{
 		Scanner input = new Scanner (System.in);
+		//This creates an Instance of the BattleShip game, Contains all of the data on where ships are for both players
 		BattleShip p1 = new BattleShip();
+
+		//There needs to be a Computer player Method added. 
 		//There needs to be instructions added to the user knows what to do. 
-		//There also needs to be inputs for the user to setup the game and play it. 
+		//There also needs to be inputs for the user to setup the game and play it.
+		
+		
 
 		int row;
 		int colm;
@@ -46,11 +69,17 @@ public class battleshipApp {
 		p1.SetupDisplay();//This just displayes the players board.
 		isVertical= orientation();
 
+		//This askes the user what Row do you what the ship to be in
 		System.out.print("What Row do you want your Ship to be in?:");
+		//This captures the users answer, and translates the Human entered number into the correct number (See transLateGrid Method)
 		row = translateGrid(input.nextInt());
+		
 		System.out.println();
+		//This is here to fix Java issues with input.nextLine
 		input.nextLine();
+		//This askeds the user what Column they want there ship to be in. 
 		System.out.println("What column do you want your Ship to be in?:");
+		//The captures the users answer and translates the Human entered Letter in the a number that the computer can understand. (See transLateGrid Method)
 		colm = translateGrid(input.nextLine());
 
 		if (!p1.addShipP1(row, colm, isVertical, 2)) {//Testing adding ships We need to get it so it is all user input. For example 1 ,2 would need to be 2C. To start the ship and True is saying it IS vertical
