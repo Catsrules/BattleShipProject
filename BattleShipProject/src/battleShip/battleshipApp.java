@@ -23,14 +23,16 @@ import java.util.Scanner;
 public class battleshipApp {
 
 	public static void main(String[] args) {
-	
+		SinglePlayer s1 = new SinglePlayer();
 	    Scanner input = new Scanner (System.in);
 	    int selection;
 	    do {
 	    	menuPrompt();
 	    	selection = input.nextInt();
+	    	
 	    	switch(selection) {
-	    	case 1: singlePlayer();
+	    	case 1: battleShip.SinglePlayer.SinglePlayerMain();
+	    	
 	    		break;
 	    	case 2: multiPlayer();
 	    		break;
@@ -50,9 +52,15 @@ public class battleshipApp {
 		System.out.println("Press 0 to Exit");
 		System.out.print("Your choice: ");
 	}
-	private static void singlePlayer()
+	private static void SinglePlayer()
 	{
-		Scanner input = new Scanner (System.in);
+		SinglePlayer s1 = new SinglePlayer();
+		String[][] board = new String[8][8];
+		createBoard(board);
+	      createShip(board, 4);
+	      int torps = 15;
+	      int hits = 0;
+		s1.createBoard(board);
 		//This creates an Instance of the BattleShip game, Contains all of the data on where ships are for both players
 		BattleShip p1 = new BattleShip();
 
