@@ -56,8 +56,6 @@ public class battleshipApp {
 	{
 		SinglePlayer s1 = new SinglePlayer();
 		String[][] board = new String[8][8];
-		createBoard(board);
-	      createShip(board, 4);
 	      int torps = 15;
 	      int hits = 0;
 		s1.createBoard(board);
