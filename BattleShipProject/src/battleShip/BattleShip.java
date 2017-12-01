@@ -248,13 +248,13 @@ if ((battlefieldP2.length < row) || (battlefieldP2[0].length < colm)) {//check f
 			return false;
 		};
 		if (battlefieldP2[row][colm] == '@') { //check for hit
-			System.out.println("HIT!!!");
+			System.out.println("Player 1 HIT!!!");
 			battlefieldP2[row][colm] = '#';
 			battlefieldP1viewP2[row][colm] = '#';
 			return true;
 		};
 		if (battlefieldP2[row][colm] == '~') { //check for hit
-			System.out.println(" Miss");
+			System.out.println("Player 1 Miss");
 			battlefieldP2[row][colm] = '*';
 			battlefieldP1viewP2[row][colm] = '*';
 			return true;
