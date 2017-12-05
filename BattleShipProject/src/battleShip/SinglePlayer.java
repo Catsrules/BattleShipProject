@@ -58,14 +58,14 @@ public class SinglePlayer{
 			p1.player1Display();
 			do{
 			//This askes the user what Row do you what to attack
-			System.out.print("What Row do you want to attack?:");
+			System.out.print("What Row (1-8) do you want to attack?:");
 			//This captures the users answer, and translates the Human entered number into the correct number (See transLateGrid Method)
 			row = translateGrid(input.nextInt());
 			System.out.println();
 			//This is here to fix Java issues with input.nextLine
 			input.nextLine();
 			//This askeds the user what Column they want there ship to be in. 
-			System.out.print("What column do you want your Ship to be in?:");
+			System.out.print("What column (A-H) do you want to attack?:");
 			//The captures the users answer and translates the Human entered Letter in the a number that the computer can understand. (See transLateGrid Method)
 			colm = translateGrid(input.nextLine());			
 				valid = p1.player1Fire(row, colm);
@@ -129,14 +129,14 @@ public class SinglePlayer{
 		isVertical = orientation(shipName);
 		
 		//This askes the user what Row do you what the ship to be in
-		System.out.print("What Row do you want your Ship to be in?:");
+		System.out.print("What Row (1-8) do you want your Ship to be in?:");
 		//This captures the users answer, and translates the Human entered number into the correct number (See transLateGrid Method)
 		row = translateGrid(input.nextInt());
 		System.out.println();
 		//This is here to fix Java issues with input.nextLine
 		input.nextLine();
 		//This askeds the user what Column they want there ship to be in. 
-		System.out.println("What column do you want your Ship to be in?:");
+		System.out.println("What column (A-H) do you want your Ship to be in?:");
 		//The captures the users answer and translates the Human entered Letter in the a number that the computer can understand. (See transLateGrid Method)
 		colm = translateGrid(input.nextLine());
 		if (!p1.addShipP1(row, colm, isVertical, shipSize)) {//Testing adding ships We need to get it so it is all user input. For example 1 ,2 would need to be 2C. To start the ship and True is saying it IS vertical

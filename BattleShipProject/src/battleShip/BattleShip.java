@@ -62,9 +62,7 @@ public class BattleShip {
 	      }
 	      
 	   }
-	public BattleShip() {
-		//ToDo Something With
-	}
+	
 	//this is for adding a ship to Player 1 battlefield. It needs to position to start the ship.
 	//the direction the ship is going and the length of the ship
 	public boolean addShipP1 (int row1, int col1, boolean vertical, int shipLength) {
